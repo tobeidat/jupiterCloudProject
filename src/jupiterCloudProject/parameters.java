@@ -19,8 +19,8 @@ public class parameters {
 		driver.manage().window().maximize();
 	}
 
-	public void addItemsFunction() throws InterruptedException {
-		List<WebElement> allItems = driver.findElements(By.className("btn-success"));
+	public void addItemsFunction(List<WebElement> allItemsList) throws InterruptedException {
+		List<WebElement> allItems = allItemsList;
 		for (int i = 0; i < allItems.size(); i++) {
 			allItems.get(i).click();
 
@@ -84,8 +84,8 @@ public class parameters {
 
 	}
 
-	public void addSeconedRowItems() {
-		List<WebElement> products = driver.findElements(By.className("btn-success"));
+	public void addRowItems(List<WebElement> allProductPrices) {
+		List<WebElement> products = allProductPrices;
 		for (int i = 5; i < products.size(); i++) {
 			products.get(i).click();
 		}
